@@ -11,6 +11,8 @@ body {
 
 
 .nav {
+    display: flex;
+    align-items: center;
     height: 10vh;
     background: #24292e;
     display: flex;
@@ -20,7 +22,7 @@ body {
 .top-left {
     display: flex;
     align-items: center;
-    width: 50%;
+    width: 70%;
 }
 
 
@@ -45,11 +47,19 @@ input.top-input[type="text"] {
     border: #45464a 1px solid;
     border-radius: 6px;
     padding: 7px 100px 7px 10px;
+    color: #c9cbcd;
+    font-size: 13px;
 }
 
 input.top-input[type="text"]::placeholder {
     font-size: 13px;
     color: #c9cbcd;
+}
+
+input.top-input[type="text"]:focus {
+    border-color: #3a8fc7;
+    padding-right: 350px;
+    transition: all 0.3s ease;
 }
 
 input.top-btn[type="button"] {
@@ -88,7 +98,7 @@ ul.options li:hover {
 .top-right {
     display: flex;
     align-items: center;
-    width: 50%;
+    width: 30%;
     justify-content: flex-end;
 }
 
@@ -141,7 +151,12 @@ img {
     border-radius: 50%;
 }
 
-.repo-sect hr {
+.repo-sect-desktop {
+    position: sticky;
+    top: 0;
+}
+
+.repo-sect-desktop hr {
     border-color: #d9d9de;
     height: 1px;
     border-top: 1px;
@@ -158,9 +173,9 @@ img {
     display: flex;
     align-items: center;
     position: absolute;
-    left: 50%;
+    left: 45%;
     bottom: 0;
-    transform: translateX(-50%);
+    transform: translateX(-45%);
 }
 
 .select-class, .focus {
@@ -233,7 +248,8 @@ main {
 
 .left-main {
     width: 24%;
-    transform: translateY(-12%);
+    top: 10%;
+    transform: translateY(-10%);
     padding: 10px 0;
 }
 
@@ -287,9 +303,12 @@ main {
     max-width: 80%;
     width: 100%;
     font-size: 15px;
-    font-weight: 600;
 }
 
+.update {
+    display: flex;
+    padding-top: 5px;
+}
 
 .find-search input {
     width: 97%;
@@ -298,6 +317,7 @@ main {
     border: #dcd7d7 1px solid;
     border-radius: 6px;
     margin: 10px 0;
+    color: #6a6666;
 }
 
 .right-main hr {
@@ -318,7 +338,7 @@ main {
 
 .repo-name {
     font-size: 20px;
-    color: blue;
+    color: rgb(77, 77, 240);
     cursor: pointer;
     
 }
@@ -392,12 +412,48 @@ main {
     color: rgb(50, 50, 50);
  }
 
+ .buttons {
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     margin-top: 10px;
+     margin-bottom: 60px;
+ }
+
+ .previous {
+    border: #dcd7d7 1px solid;
+    border-radius: 6px;
+    font-size: 14px;
+    padding: 7px 15px;
+    color: #3a8fc7;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    cursor: pointer;
+    opacity: 0.6;
+ }
+
+ .next {
+    border: #dcd7d7 1px solid;
+    border-radius: 6px;
+    font-size: 14px;
+    padding: 7px 15px;
+    color: #3a8fc7;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    border-left: none;
+    cursor: pointer;
+ }
+
+ .next:hover {
+    background: #3a8fc7;
+    color: #fff;
+    transition: all 0.4s ease;
+ }
  
 
  .footer-container {
      display: flex;
      align-items: center;
-     /* position: absolute; */
      bottom: 0;
      width: 100%;
      height: 15vh;
@@ -405,7 +461,7 @@ main {
  }
 
  .footer-left {
-    width: 35%;
+    width: 80%;
 }
 
 
@@ -413,6 +469,13 @@ main {
     margin-right: 60px;
     width: 45%;
  }
+
+ .foot-cont {
+    display: flex;
+    width: 45%;
+    margin-left: 60px;
+    justify-content: space-evenly;
+}
 
   .links {
     display: flex;
@@ -432,7 +495,7 @@ main {
  }
 
  .footer-center {
-     width: 10%;
+     width: 5%;
      display: flex;
      justify-content: center;
  }
@@ -442,10 +505,11 @@ main {
     align-items: center;
     font-size: 12px;
     color: #6a6666;
-    margin-left: 60px;
-    width: 10%;
+    width: 20%;
 
  }
+
+ 
 
  .copy-icon {
     display: flex;
@@ -464,8 +528,362 @@ main {
     margin: 0 60px;
 }
 
- 
+.hamburger, .repo-sect-mobile {
+    display: none;
+}
 
+.pull-t {
+    display: none;
+}
+
+.pull-d {
+    display: flex;
+}
+
+
+
+@media only screen and (max-width: 600px) {
+
+    .search-input, .user-options, .user-profile, ul.options, .repo-sect-desktop, .main-icon, .footer-center {
+        display: none;
+    }
+
+   .notifications {
+       align-items: center;
+       height: inherit;
+       margin-right: 0;
+   }
+
+   .hamburger {
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+    width: 45%;
+}
+
+.select-icon, .repo-icon {
+    display: none !important;
+}
+
+.line {
+    background: #c4c4c4;
+    height: 2px;
+    width: 20px;
+    border-radius: 10px;
+}
+
+
+
+.top-left {
+    justify-content: space-between;
+    width: 10%;
+}
+
+.top-right {
+    width: 45%;
+}
+
+
+.line-center {
+    margin: 5px 0;
+}
+
+main {
+    flex-direction: column;
+    padding: 0 30px;
+}
+
+.left-main, .right-main {
+    width: 100%;
+}
+
+.main-img {
+    width: 80px;
+    height: 80px;
+}
+
+.left-main {
+    top: 0;
+    transform: translateY(0);
+    padding: 10px 0;
+}
+
+.main-mobile {
+    display: flex;
+}
+
+.names {
+    margin-left: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.main-name h2 {
+    margin: 0;
+}
+
+.main-description {
+    max-width: 100%;
+    font-weight: 400;
+    margin-top: 40px;
+    margin-bottom: 10px;
+}
+
+.repo-sect-mobile, .footer-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.repo-sect-mobile hr {
+    border-color: #d9d9de;
+    height: 1px;
+    border-top: 1px;
+    margin-top: -1px;
+    width: 99%;
+}
+
+
+
+.disp {
+    margin-right: 0;
+}
+
+.text {
+    font-size: 11px;
+}
+
+.select {
+    max-width: 100%;
+    width: 100%;
+}
+
+.select-options {
+    justify-content: space-evenly;
+    left: 0;
+    right: 0;
+    transform: translateX(0);
+    
+}
+
+.select-class {
+    padding-right: 10px;
+    padding: 0;
+    padding-bottom: 10px;
+}
+
+.focus {
+    padding: 0;
+     padding-bottom: 10px;
+}
+
+.select-label {
+    font-size: 12px;
+}
+
+.find-search input {
+    width: 93%;
+}
+
+.repo-name {
+    font-weight: 600;
+    font-size: 16px;
+    max-width: 100%;
+    width: 100%;
+
+}
+
+
+.repo-data {
+    max-width: 100%;
+    width: 100%;
+}
+
+.repo-data, .disp {
+    justify-content: space-between;
+
+}
+
+.copy-text, .links {
+    font-size: 11px;
+}
+
+.repo-description {
+    font-size: 13px;
+    max-width: 75%;
+    width: 100%;
+    line-height: 20px;
+}
+
+.content-right {
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.footer-cont hr {
+    margin: 0 30px;
+}
+
+ .footer-right, .foot-cont {
+    max-width: 100%;
+    width: 80%;
+    margin: 0;
+}
+
+.footer-right {
+    width: 70%;
+}
+
+.footer-left {
+    width: 65%;
+}
+
+.copyright {
+    width: 35%;
+}
+
+.foot-cont {
+    margin-top: 10%;
+    margin-bottom: 3%;
+}
+
+
+}
+
+@media only screen and (min-width: 601px) and (max-width: 900px) {
+    .pull-d, .main-icon, .footer-center {
+        display: none;
+    }
+
+    .pull-t {
+        display: flex;
+    }
+
+    .select-options {
+        transform: translateX(-70%);
+        left: 70%;
+    }
+
+    .select-class, .focus {
+        padding: 0 10px 20px;
+    }
+
+    
+main {
+    display: flex;
+    padding: 0 30px;
+}
+
+    .main-img {
+        width: 90%;
+        height: 30vh;
+    }
+
+       .footer-cont hr {
+        margin: 0;
+    }
+
+    .main-name h2 {
+        margin-bottom: 0;
+    }
+
+    .main-description {
+        max-width: 90%;
+        width: 100%;
+        margin-top: 10%;
+    }
+
+    .footer-container {
+         flex-direction: column;
+    }
+
+    .foot-cont {
+        max-width: 50%;
+        width: 100%;
+        margin-left: 0;
+        margin-top: 5%;
+        margin-bottom: 2%;
+    }
+
+    .footer-left {
+        width: 65%;
+    }
+
+    .copyright {
+        width: 35%;
+    }
+    
+    
+     .footer-right {
+        margin-right: 0;
+        max-width: 40%;
+        width: 100%;
+     }
+
+     
+}
+
+@media only screen and (min-width: 901px) and (max-width: 1200px) {
+    .main-icon {
+        display: none;
+    }
+
+    .select-options {
+        transform: translateX(-60%);
+        left: 60%;
+    }
+    
+    main {
+        display: flex;
+        padding: 0 30px;
+    }
+    
+        .main-img {
+            width: 90%;
+            height: 30vh;
+        }
+    
+        .main-name h2 {
+            margin-bottom: 0;
+        }
+
+        .main-description {
+            max-width: 90%;
+            width: 100%;
+            margin-top: 10%;
+        }
+
+   
+       .foot-cont {
+           max-width: 40%;
+           width: 100%;
+           margin-left: 30px;
+       }
+   
+       .footer-left {
+           width: 65%;
+       }
+   
+       .copyright {
+           width: 35%;
+       }
+
+       .footer-center {
+           width: 20%;
+       }
+
+       
+       .footer-cont hr {
+        margin: 30px;
+    }
+       
+        .footer-right {
+           margin-right: 30px;
+           max-width: 40%;
+           width: 100%;
+        }
+
+}
 
 
 
