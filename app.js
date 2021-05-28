@@ -1,4 +1,3 @@
-// const token = process.env.TOKEN_VALUE;
 const userName = document.querySelector("h2");
 const repoUser = document.querySelector(".main-username");
 const submitBtn = document.querySelector(".top-btn");
@@ -43,7 +42,7 @@ function handleBlock() {
 
 
 
-function loadQuery () {
+function loadQuery () {     //fetches query data and loads new nodes
 
    fetch('https://api.github.com/graphql', {
         method: 'POST',
@@ -193,7 +192,7 @@ window.onload = loadQuery();  //fetch my data on load
 
  
 
- function handleSearch() {
+ function handleSearch() {         //handles search on input change
 
 
      function handleChange (e) {
@@ -207,7 +206,7 @@ window.onload = loadQuery();  //fetch my data on load
 submitBtn.addEventListener("click", handleSearch)  //fetches data on search click
 
 
-enterSearch.addEventListener('keydown', (e) => {
+enterSearch.addEventListener('keydown', (e) => {   //fetch data on keypress enter
 if (e.key === 'Enter') {
              e.preventDefault()
             handleSearch()
