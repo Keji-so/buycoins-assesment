@@ -255,7 +255,6 @@ img {
 
 .new-div {
     display: block;
-    /* flex-direction: column;. */
 }
 
 main {
@@ -672,7 +671,9 @@ background-color: white;
     border-top: 1px;
     margin-top: -1px;
     width:100%;
-
+    appearance: none:
+    -moz-appearance: none;
+    -webkit-appearance: none;
 }
 
 
