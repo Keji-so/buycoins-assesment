@@ -167,11 +167,13 @@ img {
 }
 
 .repo-sect-desktop hr {
-    border-color: #b1b1b5;
+    border-color: #d9d9de;
     height: 1px;
     border-top: 1px;
     margin-top: -1px;
     z-index: 1;
+     column-span: all;
+    -webkit-column-span: all;
 }
 
 .select {
@@ -338,9 +340,11 @@ main {
 }
 
 .right-main hr {
-    border-color: #b1b1b5;
+    border-color: #d9d9de;
     height: 1px;
     border-top: 1px;
+    column-span: all;
+    -webkit-column-span: all;
 }
 
 .main-content {
@@ -541,10 +545,12 @@ main {
  }
 
  .footer-cont hr {
-    border-color: #b1b1b5;
+    border-color: #d9d9de;
     height: 1px;
     border-top: 1px;
     margin: 0 60px;
+    column-span: all;
+    -webkit-column-span: all;
 }
 
 .hamburger, .repo-sect-mobile {
@@ -664,11 +670,13 @@ background-color: white;
 }
 
 .repo-sect-mobile hr {
-    border-color: #b1b1b5;
+    border-color: #d9d9de;
     height: 1px;
     border-top: 1px;
     margin-top: -1px;
-    width: 100%;
+    width:100%;
+    column-span: all;
+    -webkit-column-span: all;
 }
 
 
